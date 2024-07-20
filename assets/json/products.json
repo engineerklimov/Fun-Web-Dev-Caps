@@ -1,0 +1,45 @@
+[
+    {
+      title: "AstroFiction",
+      author: "Nikita Klimov",
+      price: .49,
+      image: "./assets/img/img1.png"
+    },
+    {
+      title: "Cyberpunk Spacecraft",
+      author: "Nikita Klimov",
+      price: .35,
+      image: "./assets/img/img2.png"
+    },
+    {
+      title: "Futuristic Library",
+      author: "Nikita Klimov",
+      price: 1,
+      image: "./assets/img/img3.png"
+    },
+    {
+      title: "Neon Flower Field",
+      author: "Nikita Klimov",
+      price: 1.25,
+      image: "./assets/img/img4.png"
+    },
+    {
+      title: "My Little Robot",
+      author: "Nikita Klimov",
+      price: .99,
+      image: "./assets/img/img5.png"
+    },
+    {
+      title: "Black Dog",
+      author: "Nikita Klimov",
+      price: 0.01,
+      image: "./assets/img/img6.png"
+    }
+    ,
+    {
+      title: "Retro Sci-Fi Shuttle",
+      author: "Nikita Klimov",
+      price: 0.1,
+      image: "./assets/img/img7.png"
+    }
+  ]

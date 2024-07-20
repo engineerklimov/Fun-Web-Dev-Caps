@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Website Development Introduction</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <div class="nav-left-side">
+          <a href="/">Final Website Development Introduction</a>
+        </div>
+
+        <button id="open-nav-menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H15C15.4142 5.25 15.75 5.58579 15.75 6C15.75 6.41421 15.4142 6.75 15 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 18C3 17.5858 3.33579 17.25 3.75 17.25H15C15.4142 17.25 15.75 17.5858 15.75 18C15.75 18.4142 15.4142 18.75 15 18.75H3.75C3.33579 18.75 3 18.4142 3 18Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+
+        <div class="wrapper">
+          <ul>
+            <li>
+              <button id="close-nav-menu">
+                <svg
+                  width="47"
+                  height="47"
+                  viewBox="0 0 47 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.7505 11.7495L35.2505 35.2495"
+                    stroke="#A259FF"
+                    stroke-width="6"
+                  />
+                  <path
+                    d="M35.2502 11.7502L11.7502 35.2502"
+                    stroke="#A259FF"
+                    stroke-width="6"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#img">img</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="container greeting-section">
+      </section>
+
+
+      <section id="img" class="container img-section">
+        <div class="img-filter">
+          <input type="radio" checked="true" id="new" name="img" />
+          <label for="new">
+            New
+            <span class="product-amount">0</span>
+          </label>
+          <input type="radio" id="all" name="img" />
+          <label for="all">
+            All
+            <span class="product-amount">0</span>
+                    <span class="glider"></span>
+        </div>
+
+        <div class="img-area">
+          
+       </div>
+
+      </section>
+
+      <section id="contact" class="container faqs-section">
+        <h3>Call 786.637.3714 or email at engineerklimov@gmail.com</h3>
+
+        <details open>
+          <summary>Order placement</summary>
+
+          <p>
+            At this moment you can place an order via phone or email.
+          </p>
+        </details>
+
+        <details>
+          <summary>Refund policy</summary>
+
+          <p>
+            Full refunds within 30 days of purchase. 
+          </p>
+        </details>
+
+        <details>
+          <summary>More questions</summary>
+
+          <p>
+            Feel free to give us a call or send us an email!
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
