@@ -14,14 +14,11 @@ html {
   scroll-behavior: smooth;
 }
 
-*,
-*:before,
-*:after {
+* {
   box-sizing: inherit;
 }
 
-body,
-h1,
+/* styles for body */
 h2,
 h3,
 h4,
@@ -123,7 +120,6 @@ header nav .nav-right-side label {
 header nav .wrapper {
   position: fixed;
   top: 0;
-  /*left: -100%;*/
   right: -100%;
   height: 100%;
   width: 100%;
@@ -141,8 +137,9 @@ header nav .wrapper.nav-open {
   right: 0;
 }
 
-header nav .wrapper ul li+li {
+main .img-section {
   margin-top: 60px;
+}
 }
 
 header nav .wrapper ul li a {
@@ -357,15 +354,11 @@ main .faqs-section details summary {
   line-height: 20px;
   width: 100%;
   cursor: pointer;
-  list-style: none;
 }
 
 main .faqs-section details summary::-webkit-details-marker,
 main .faqs-section details summary::marker {
   display: none;
-}
-
-main .faqs-section details summary::after {
   content: url("data:image/svg+xml,<svg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M13 1L7 7L1 1' stroke='white' stroke-width='2'/></svg>");
   margin-left: 10px;
 }
@@ -384,7 +377,6 @@ footer {
   font-weight: 400;
   font-size: 12px;
   line-height: 13px;
-  text-align: center;
   width: 100%;
   background-color: var(--light-background-color);
 }

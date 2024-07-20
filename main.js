@@ -1,36 +1,14 @@
-
-const galleryImages = [
-    {
-        src: "./sets/gallery/image1.jpg",
-        alt: "Img 1"
-    },
-    {
-        src: "./sets/gallery/image2.jpg",
-        alt: "Img 2"
-    },
-
-    {
-        src: "./sets/gallery/image3.jpg",
-        alt: "Img 3"
-    },
-
-    {
-        src: "./sets/gallery/image4.jpg",
-        alt: "Img 4"
-    }
-];
-
 const img = [
     {
         title: "AstroFiction",
         author: "Nikita Klimov",
-        price: .49,
+        price: 0.49,
         image: "./sets/img/img1.png"
     },
     {
         title: "Cyberpunk Spacecraft",
         author: "Nikita Klimov",
-        price: .35,
+        price: 0.35,
         image: "./sets/img/img2.png"
     },
     {
@@ -48,7 +26,7 @@ const img = [
     {
         title: "My Little Robot",
         author: "Nikita Klimov",
-        price: .99,
+        price: 0.99,
         image: "./sets/img/img5.png"
     },
     {
@@ -60,7 +38,7 @@ const img = [
     {
         title: "Retro Sci-Fi Shuttle",
         author: "Nikita Klimov",
-        price: .1,
+        price: 0.1,
         image: "./sets/img/img7.png"
     }
 ];
@@ -77,40 +55,23 @@ function menuHandler() {
     });
 }
 
-
-// Greeting 
-
-function greetingHandler() {
-    let greetingText = "Final Website Development Introduction"
-
-
-
-}
-
 // Img 
 
-function populateimg(productList) {
-
-    let imgSection = document.querySelector(".img-area");
+function populateImg(productList) {
+    const imgSection = document.querySelector(".img-area");
     imgSection.textContent = "";
 
-    // Run a loop through the img and create an HTML element ("product-item") for each of them
-    productList.forEach(function (product, index) {
-
-        // Create the HTML element for the individual product 
+    productList.forEach(function (product) {
         let productElm = document.createElement("div");
         productElm.classList.add("product-item");
 
-        // Create the product image
         let productImage = document.createElement("img");
         productImage.src = product.image;
         productImage.alt = "Image for " + product.title;
 
-        // Create the product details 
         let productDetails = document.createElement("div");
         productDetails.classList.add("product-details");
 
-        // Create product title, author, price-title and price
         let productTitle = document.createElement("h3");
         productTitle.classList.add("product-title");
         productTitle.textContent = product.title;
@@ -124,43 +85,36 @@ function populateimg(productList) {
         productPrice.classList.add("product-price");
         productPrice.textContent = product.price > 0 ? "$" + product.price.toFixed(2) : "Free";
 
-        // Append the product details
         productDetails.append(productTitle);
         productDetails.append(productAuthor);
         productDetails.append(priceTitle);
         productDetails.append(productPrice);
 
-        // Add all child HTML elements of the product
-        productElm.append(productImage);
-        productElm.append(productDetails);
+        productElm.appendChild(productImage);
+        productElm.appendChild(productDetails);
 
-        // Add complete individul product to the product
-        imgSection.append(productElm);
-
+        imgSection.appendChild(productElm);
     });
 }
 
 function imgHandler() {
+    let paidImg = img.filter(item => item.price > 0);
 
-    let freeimg = img.filter(item => !item.price || item.price <= 0);
-
-    let paidimg = img.filter(item => item.price > 0);
-
-    populateimg(img);
+    populateImg(img);
 
     document.querySelector(".img-filter label[for=all] span.product-amount").textContent = img.length;
-    document.querySelector(".img-filter label[for=paid] span.product-amount").textContent = paidimg.length;
-    document.querySelector(".img-filter label[for=free] span.product-amount").textContent = freeimg.length;
+    document.querySelector(".img-filter label[for=paid] span.product-amount").textContent = paidImg.length;
+    document.querySelector(".img-filter label[for=free] span.product-amount").textContent = img.length - paidImg.length;
 
     let imgFilter = document.querySelector(".img-filter");
 
     imgFilter.addEventListener("click", function (e) {
         if (e.target.id === "all") {
-            populateimg(img);
+            populateImg(img);
         } else if (e.target.id === "paid") {
-            populateimg(paidimg);
+            populateImg(paidImg);
         } else if (e.target.id === "free") {
-            populateimg(freeimg);
+            populateImg(img.filter(item => !item.price || item.price <= 0));
         }
     });
 }
@@ -173,7 +127,5 @@ function footerHandler() {
 // Page Load
 
 menuHandler();
-greetingHandler();
 imgHandler();
 footerHandler();
-
